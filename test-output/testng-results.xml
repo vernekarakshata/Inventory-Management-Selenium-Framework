@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="58250" started-at="2019-07-12T16:28:55Z" finished-at="2019-07-12T16:29:53Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="58250" started-at="2019-07-12T16:28:55Z" finished-at="2019-07-12T16:29:53Z">
+      <class name="com.invenotry.framework.SeleniumTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.invenotry.framework.SeleniumTest@1bce4f0a]" name="beforeTest" is-config="true" duration-ms="5028" started-at="2019-07-12T21:58:55Z" finished-at="2019-07-12T21:59:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.invenotry.framework.SeleniumTest@1bce4f0a]" name="loginTest" duration-ms="28477" started-at="2019-07-12T21:59:00Z" finished-at="2019-07-12T21:59:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.invenotry.framework.SeleniumTest@1bce4f0a]" name="afterMethod" is-config="true" duration-ms="27" started-at="2019-07-12T21:59:28Z" finished-at="2019-07-12T21:59:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTest status=SUCCESS method=SeleniumTest.loginTest()[pri:0, instance:com.invenotry.framework.SeleniumTest@1bce4f0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logoutTest()[pri:0, instance:com.invenotry.framework.SeleniumTest@1bce4f0a]" name="logoutTest" duration-ms="23362" started-at="2019-07-12T21:59:28Z" finished-at="2019-07-12T21:59:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutTest -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.invenotry.framework.SeleniumTest@1bce4f0a]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-07-12T21:59:51Z" finished-at="2019-07-12T21:59:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logoutTest status=SUCCESS method=SeleniumTest.logoutTest()[pri:0, instance:com.invenotry.framework.SeleniumTest@1bce4f0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.invenotry.framework.SeleniumTest@1bce4f0a]" name="endReport" is-config="true" duration-ms="1315" started-at="2019-07-12T21:59:51Z" finished-at="2019-07-12T21:59:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.invenotry.framework.SeleniumTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
