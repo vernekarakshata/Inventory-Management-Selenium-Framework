@@ -34,6 +34,7 @@ public class SeleniumTest {
 	static ExtentTest logger;
 	static WebDriver driver;
 	WebDriverWait wait;
+	static String HUB_URL = "http://ec2-18-216-169-181.us-east-2.compute.amazonaws.com:8082/wd/hub";
 	
 	static String APPLICATION_URL = "http://localhost:8080/InventoryManagement/";
 	
@@ -50,7 +51,7 @@ public class SeleniumTest {
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		
-		driver = new ChromeDriver(options);
+		driver = new RemoteWebDriver(new java.net.URL(HUB_URL), capabilities);
 		driver.manage().window().maximize();
 		
 		wait = new WebDriverWait(driver, 10);
