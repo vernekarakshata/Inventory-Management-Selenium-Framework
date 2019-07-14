@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.util.Base64;
 
 import org.apache.commons.io.FileUtils;
@@ -37,7 +38,7 @@ public class SeleniumTest {
 	WebDriverWait wait;
 	static String HUB_URL = "http://ec2-18-216-169-181.us-east-2.compute.amazonaws.com:8082/wd/hub";
 	
-	static String APPLICATION_URL = "http://localhost:8080/InventoryManagement/";
+	static String APPLICATION_URL = "http://ec2-18-216-169-181.us-east-2.compute.amazonaws.com:8081/InventoryManagement/";
 	
 	@BeforeTest
 	public void beforeTest() throws MalformedURLException  {
