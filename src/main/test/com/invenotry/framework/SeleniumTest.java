@@ -37,9 +37,9 @@ public class SeleniumTest {
 	static ExtentTest logger;
 	static WebDriver driver;
 	WebDriverWait wait;
-	static String HUB_URL = "http://ec2-3-17-4-149.us-east-2.compute.amazonaws.com:8082/wd/hub";
+	static String HUB_URL = "http://whkco36769dns0.eastus2.cloudapp.azure.com:8082/wd/hub";
 	
-	static String APPLICATION_URL = "http://ec2-3-17-4-149.us-east-2.compute.amazonaws.com/InventoryManagement/";
+	static String APPLICATION_URL = "http://ec2-3-16-37-126.us-east-2.compute.amazonaws.com/InventoryManagement/";
 	
 	@BeforeTest
 	public void beforeTest() throws MalformedURLException  {
