@@ -67,38 +67,44 @@ public class SeleniumTest {
 	
 	@Test
 	void loginTest() throws IOException, InterruptedException{
+		System.out.println("Login test started");
 		logger = extent.startTest("Login Test", "This Test is done for testing login functionality of a application");
 		loginFunction();
+		System.out.println("Login test ended");
 	}
 	
 	@Test
 	void logoutTest() throws IOException, InterruptedException{
+		System.out.println("Logout test started");
 		logger = extent.startTest("Logout Test", "This Test is done for testing logout functionality of a application");
 		logoutFunction();
+		System.out.println("Logout test ended");
 	}
 	
 	
 	
 	
 	void loginFunction() throws IOException, InterruptedException{	
+		
 		driver.get(APPLICATION_URL);
 		logger.log(LogStatus.PASS, "Successfully started application");		
 		captureScreenshot();
-		
+		System.out.println("Successfully started application");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("name"))).click();		
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("name"))).sendKeys("akshata");
 		captureScreenshot();
 		logger.log(LogStatus.PASS, "Successfully entered username");		
-		
+		System.out.println("Successfully entered username");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("password"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("password"))).sendKeys("ak123");
 		captureScreenshot();
 		logger.log(LogStatus.PASS, "Successfully entered password");		
-		
+		System.out.println("Successfully entered password");
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='loginapp']//input[@value='Login']"))).click();
 		captureScreenshot();
-		logger.log(LogStatus.PASS, "Successfully clicked on log in");		
+		logger.log(LogStatus.PASS, "Successfully clicked on log in");	
+		System.out.println("Successfully clicked on log in");
 	}
 	
 	
@@ -109,77 +115,9 @@ public class SeleniumTest {
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Log Out"))).click();
 		captureScreenshot();
 		logger.log(LogStatus.PASS, "Successfully clicked on log out");
+		System.out.println("Successfully clicked on log out");
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	/*
-	
-	@Test
-	public void facebookLogin()
-	{
-		logger = extent.startTest("Skip Test", "This Test is performed only to show how a skip test works");
-		driver.get("https://www.facebook.com/");
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		WebElement email = wait.until(ExpectedConditions.elementToBeClickable(By.id("email")));
-		//Add a log in the test if the url is successfully loaded.		
-		String titileOfPage = driver.getTitle();
-		Assert.assertEquals(titileOfPage, "Facebook  log in or sign up");
-		logger.log(LogStatus.PASS, "The facebook title matches with expected");		
-		//Add a log in the test to if email id	entered
-		email.sendKeys("akshata@gmail.com");
-		logger.log(LogStatus.PASS, "Email Id is entered successfully");		
-		//Skip the test as I do not want to enter my password
-		throw new SkipException("Skipped: I do not wish to enter my password ID");		
-	}
-	
-	
-	@Test
-	public void gmailLoginFailed()
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 6);
-		logger = extent.startTest("Fail Test", "This Test is performed only to show how a fail test works");
-		driver.get("https://www.google.co.in/");
-		logger.log(LogStatus.PASS, "Successfully went to the google url");
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Gmail"))).click();
-		logger.log(LogStatus.PASS, "Clicked on gmail successfully");			
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("identifierId"))).sendKeys("akshatav10@gmail.com");
-		logger.log(LogStatus.PASS, "Successfully entered email");	
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"identifierNext\"]/content/span"))).click();
-		logger.log(LogStatus.PASS, "Clicked on Next after entering email successfully");	
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.name("password"))).sendKeys("wrongpassword");
-		logger.log(LogStatus.PASS, "Successfully entered password");
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"passwordNext\"]/content/span"))).click();
-		logger.log(LogStatus.PASS, "Clicked on Next after entering password successfully");	
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'COMPOSE')]"))).click();
-		logger.log(LogStatus.PASS, "Clicked on Compose mail successfully");	
-	}
-	
-	
-	@Test
-	
-	public void yahooSitePassd()
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		logger = extent.startTest("Fail Test", "This Test is performed only to show how a passed test works");
-		driver.get("https://in.yahoo.com/");		
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("uh-search-box")));
-		//Add a log in the test if the url is successfully loaded.		
-		String titileOfPage = driver.getTitle();
-		Assert.assertEquals(titileOfPage, "Yahoo");
-		logger.log(LogStatus.PASS, "Visited the yahoo site successfully");	
-	}*/
 	
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException, InterruptedException {
